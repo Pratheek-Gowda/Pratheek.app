@@ -14,5 +14,22 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/", "destination": "/shop/index.html" },
+    { "source": "/about", "destination": "/shop/about.html" },
+    { "source": "/contact", "destination": "/shop/contact.html" },
+    { "source": "/airtel", "destination": "/shop/airtel.html" },
+    { "source": "/jio", "destination": "/shop/jio.html" },
+    { "source": "/vodafoneidea", "destination": "/shop/vodafoneidea.html" },
+    { "source": "/disclaimer", "destination": "/shop/disclaimer.html" },
+    { "source": "/guide-mnp", "destination": "/shop/guide-mnp.html" },
+    { "source": "/guides", "destination": "/shop/guides.html" },
+    { "source": "/privacy", "destination": "/shop/privacy.html" },
+    { "source": "/privacy-policy", "destination": "/shop/privacy-policy.html" },
+    { "source": "/terms", "destination": "/shop/terms.html" },
+    { "source": "/thankyou", "destination": "/shop/thankyou.html" },
+    { "source": "/thank2", "destination": "/shop/Thank2.html" },
+    { "source": "/404", "destination": "/shop/404.html" }
   ]
 }
