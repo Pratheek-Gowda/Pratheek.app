@@ -1,19 +1,21 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
-// Define which routes are completely public (e.g., Clerk's own sign-in pages)
+// Define which routes are completely public
 const isPublicRoute = createRouteMatcher([
-  '/sign-in(.*)',
-  '/sign-up(.*)',
-  '/.well-known(.*)' 
+  '/shop(.*)',           // Allows public access to the shop and all its pages/assets
+  '/api/chat(.*)',       // Allows the shop AI chatbot to work without requiring login
+  '/sign-in(.*)',        // Clerk Sign In page
+  '/sign-up(.*)',        // Clerk Sign Up page
+  '/.well-known(.*)'     // Domain & identity verification files
 ]);
 
 // Gate 1: Global Identity Shield
 // This middleware runs on Vercel's Edge network before the page or API is even hit.
-export default clerkMiddleware((auth, req) => {
+export default clerkMiddleware(async (auth, req) => {
   if (!isPublicRoute(req)) {
     // If the user does not have a valid Clerk session, they are instantly 
     // redirected to the Clerk Login page using the Environment Variables you set.
-    auth().protect();
+    await auth.protect();
   }
 });
 
