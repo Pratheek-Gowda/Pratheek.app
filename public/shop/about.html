@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Pratheek's Gesture</title>
+  <link id="favicon" rel="icon" type="image/png" href="p1.png">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1128779923094430" crossorigin="anonymous"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* --- Page Specific Styles (Interests & Highlights) --- */
+    
+    h2 {
+      color: var(--primary);
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h2::after {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 3px;
+      background: var(--primary);
+      margin-top: 5px;
+      border-radius: 2px;
+    }
+
+    h3 {
+      color: #ffe4b2;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.3em;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text-muted);
+      text-align: justify;
+    }
+
+    /* Modern Grid for Services/Interests */
+    .interests-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .interest-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      border-radius: 12px;
+      border-left: 4px solid var(--primary);
+      transition: all 0.3s ease;
+      font-size: 0.9em;
+      color: #fff;
+      border: 1px solid var(--glass-border);
+    }
+
+    .interest-item:hover {
+      transform: translateY(-5px);
+      background: rgba(240, 159, 51, 0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Highlight Quote Box */
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(136, 0, 136, 0.2), rgba(240, 159, 51, 0.2));
+      border-left: 4px solid var(--accent);
+      padding: 25px;
+      border-radius: 12px;
+      margin: 30px 0;
+      border: 1px solid var(--glass-border);
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-style: italic;
+      color: #fff;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--primary), transparent);
+      margin: 50px 0;
+      opacity: 0.5;
+    }
+
+    /* Profile Image (Optional Placeholder) */
+    .profile-img {
+      width: 150px; height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+      margin: 0 auto 20px;
+      display: block;
+      box-shadow: 0 0 20px rgba(240, 159, 51, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="airtel.html">Airtel</a></li>
+      <li><a href="vodafoneidea.html">VI</a></li>
+      <li><a href="jio.html">Jio</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div class="glass-card">
+      
+      <h1>About Us</h1>
+      <p style="text-align:center; color:#ccc;">Connecting People, Empowering Students.</p>
+
+      <h2>Pratheek's Gesture</h2>
+      <p>
+        Welcome to <strong>Pratheek's Gesture</strong>, your trusted connectivity partner in Karnataka. 
+        We are dedicated to bridging the digital gap by providing reliable and seamless telecom services 
+        to our local community.
+      </p>
+      <p>
+        As an authorized retailer for major networks like <strong>Jio</strong>, <strong>Airtel</strong>, and <strong>Vodafone Idea (VI)</strong>, 
+        we specialize in offering a wide range of services designed to keep you connected. 
+        Whether it's ensuring you have the right data plan for your education or the best talk-time offer for your business, 
+        we prioritize customer satisfaction above all else.
+      </p>
+
+      <h3>Our Services</h3>
+      <div class="interests-list" style="margin-bottom: 30px;">
+        <div class="interest-item"><i class="fas fa-sim-card"></i> New SIM Activation</div>
+        <div class="interest-item"><i class="fas fa-bolt"></i> Prepaid Recharges</div>
+        <div class="interest-item"><i class="fas fa-exchange-alt"></i> MNP Porting</div>
+        <div class="interest-item"><i class="fas fa-credit-card"></i> Bill Payments</div>
+        <div class="interest-item"><i class="fas fa-wrench"></i> Tech Support</div>
+      </div>
+
+      <p>
+        At Pratheek's Gesture, we believe in honest service. We don't just sell plans; we help you choose the 
+        value that fits your needs perfectly.
+      </p>
+
+      <div class="divider"></div>
+
+      <h2>Meet the Founder</h2>
+      
+      <p>
+        Hello! I'm <strong>Pratheek</strong>. I am an 18-year-old BSc Computer Science student at Alvas College, Karnataka.
+      </p>
+
+      <p>
+        My journey is a blend of technology and business. While I manage the daily operations of my telecom retail 
+        business, I am deeply passionate about modern technology, specifically Artificial Intelligence, and how it 
+        can empower students like me to create meaningful projects.
+      </p>
+
+      <p>
+        Balancing my academics with work has taught me valuable lessons about customer service, 
+        communication, and real-world problem-solving. This practical experience complements my academic 
+        studies, giving me a unique perspective on the intersection of commerce and technology.
+      </p>
+
+      <h3>My Learning Journey</h3>
+      <p>
+        I'm fascinated by how technology is transforming education. While I'm still learning the fundamentals 
+        of computer science, I use AI-powered tools like Perplexity AI to help me build websites and understand 
+        complex concepts. I believe in being honest about my process—AI assistance is my backbone for technical 
+        projects, allowing me to learn and create beyond my current skill level.
+      </p>
+
+      <div class="highlight-box">
+        <p>
+          "I don't claim to be a coding expert—I'm a student who leverages AI tools to bridge the gap 
+          between my ideas and execution. This approach helps me learn faster and achieve more."
+        </p>
+      </div>
+
+      <p>
+        Beyond technology, I have a deep interest in mathematics and physics. I enjoy exploring complex 
+        calculations, working with tools like wxMaxima, and understanding the fundamental principles of our world.
+      </p>
+
+      <h3>Interests & Passions</h3>
+      <div class="interests-list">
+        <div class="interest-item">📚 New Technologies</div>
+        <div class="interest-item">🤖 AI Development</div>
+        <div class="interest-item">🧮 Math & Physics</div>
+        <div class="interest-item">🌐 Web Building</div>
+        <div class="interest-item">📱 Telecom Business</div>
+        <div class="interest-item">🎥 Content Creation</div>
+        <div class="interest-item">🧠 Quizzes</div>
+        <div class="interest-item">💡 Problem Solving</div>
+      </div>
+
+      <h3>My Approach</h3>
+      <p>
+        I believe the future belongs to those who can combine human creativity with AI capabilities. 
+        Every project I build—including this website—is an opportunity to understand how things work and push my boundaries.
+      </p>
+
+      <div class="footer">
+        <p>Thanks to <b>ALL SUPPORTERS</b></p>
+        <p>&copy; 2025 Pratheek Designs. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

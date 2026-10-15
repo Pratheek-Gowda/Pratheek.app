@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airtel Services | Pratheek's Gesture</title>
+  <link id="favicon" rel="icon" type="image/png" href="p1.png">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1128779923094430" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3137365646817161" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="airtel.html" class="active">Airtel</a></li>
+      <li><a href="vodafoneidea.html">VI</a></li>
+      <li><a href="jio.html">Jio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div class="glass-card">
+      <div class="airtel-logo">
+        <img src="airtel.png" alt="Airtel Logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/c/c2/Airtel_logo.svg'">
+      </div>
+      
+      <h1>Airtel Services</h1>
+      <p class="subtitle">Get India's fastest 5G network. New SIM or Porting available.</p>
+
+      <div class="form-tabs">
+        <button class="tab-button active" onclick="showForm('new-sim')">New SIM</button>
+        <button class="tab-button" onclick="showForm('porting')">Port to Airtel</button>
+      </div>
+
+      <div id="new-sim-form" class="form-container active">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" onsubmit="return validateNewSim()">
+            <input type="hidden" name="access_key" value="e7d49fa5-f0e0-4dd9-8f05-7039e4e89cca">
+            <input type="hidden" name="subject" value="New Airtel SIM Order">
+            <input type="hidden" name="redirect" value="https://pratheek.shop/Thank2.html">
+            <input type="hidden" name="service_type" value="Airtel New SIM">
+            <input type="hidden" id="age-new" name="age" value="">
+            <input type="hidden" id="auto-location-new" name="auto_location" value="">
+
+            <div class="form-group">
+                <label for="name-new">Full Name</label>
+                <input type="text" id="name-new" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="phone-new">Phone Number</label>
+                <input type="text" id="phone-new" name="phone" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number">
+            </div>
+
+            <div class="form-group">
+                <label for="location-new">Delivery Location <button type="button" class="location-info-btn" onclick="showLocationInfo()">?</button></label>
+                <input type="text" id="location-new" name="location" placeholder="Enter address (Auto-detecting...)">
+            </div>
+
+            <div class="form-group">
+                <label for="dob-new">Date of Birth</label>
+                <input type="date" id="dob-new" name="dob" required onchange="calculateAge('new')">
+            </div>
+
+            <div id="age-display-new" class="age-display" style="display:none;">
+                Age: <span id="age-value-new">0</span> years
+            </div>
+        
+            <button type="submit" class="submit-btn">Order New SIM</button>
+        </form>
+      </div>
+
+      <div id="porting-form" class="form-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" onsubmit="return validatePorting()">
+            <input type="hidden" name="access_key" value="e7d49fa5-f0e0-4dd9-8f05-7039e4e89cca">
+            <input type="hidden" name="subject" value="Port to Airtel Request">
+            <input type="hidden" name="redirect" value="https://pratheek.shop/Thank2.html">
+            <input type="hidden" name="service_type" value="Port to Airtel">
+            <input type="hidden" id="age-port" name="age" value="">
+            <input type="hidden" id="auto-location-port" name="auto_location" value="">
+
+            <div class="form-group">
+                <label for="name-port">Full Name</label>
+                <input type="text" id="name-port" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="phone-port">Existing Phone Number</label>
+                <input type="text" id="phone-port" name="phone" required pattern="[0-9]{10}" maxlength="10" placeholder="Number you want to port">
+            </div>
+
+            <div class="form-group">
+                <label for="porting-from">Current Operator</label>
+                <select id="porting-from" name="porting_from" required>
+                    <option value="">-- Select Operator --</option>
+                    <option value="VI">VI (Vodafone Idea)</option>
+                    <option value="Jio">Jio</option>
+                    <option value="BSNL">BSNL</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location-port">Delivery Location <button type="button" class="location-info-btn" onclick="showLocationInfo()">?</button></label>
+                <input type="text" id="location-port" name="location" placeholder="Enter address (Auto-detecting...)">
+            </div>
+
+            <div class="form-group">
+                <label for="dob-port">Date of Birth</label>
+                <input type="date" id="dob-port" name="dob" required onchange="calculateAge('port')">
+            </div>
+
+            <div id="age-display-port" class="age-display" style="display:none;">
+                Age: <span id="age-value-port">0</span> years
+            </div>
+
+            <div class="form-group">
+                <label for="aadhar-port">Aadhar Number (eKYC)</label>
+                <input type="text" id="aadhar-port" name="aadhar" required pattern="[0-9]{12}" maxlength="12" placeholder="12-digit Aadhar number">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Port Request</button>
+        </form>
+      </div>
+         <div class="footer">
+        <p class="legal-footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a> | 
+          <a href="terms.html">Terms & Conditions</a> | 
+          <a href="disclaimer.html">Disclaimer</a>
+        </p>
+      <div class="footer">
+        <p>Powered by Pratheek Designs AI</p>
+      </div>
+    </div>
+
+    <div class="ad-container">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '80879fababfae031eb99a54da684a3b3',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 300,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/80879fababfae031eb99a54da684a3b3/invoke.js"></script>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

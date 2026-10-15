@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You | Pratheek's Gesture</title>
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Specific styles for the Thank You page */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Overriding min-height to ensure vertical centering */
+      min-height: 100vh; 
+    }
+
+    .content {
+      margin: 0; /* Reset margin for perfect centering */
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .success-icon {
+      font-size: 5em;
+      background: linear-gradient(135deg, #00ff88, #00b34a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+      display: inline-block;
+      animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #00ff88; /* Success Green */
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+    }
+
+    h2 {
+      font-size: 1.2em;
+      color: var(--text-main);
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .redirect-text {
+      color: var(--text-muted);
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+
+    #timer {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.2em;
+    }
+
+    /* Animation for the icon */
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      80% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+  </style>
+
+  <script>
+    let countdown = 5;
+    
+    function redirect() {
+      window.location.href = "https://pratheek.shop";
+    }
+    
+    function startCountdown() {
+      const timerEl = document.getElementById('timer');
+      const interval = setInterval(() => {
+        countdown--;
+        if (timerEl) timerEl.textContent = countdown;
+        
+        if (countdown <= 0) {
+          clearInterval(interval);
+          redirect();
+        }
+      }, 1000);
+    }
+    
+    window.onload = () => {
+      startCountdown();
+    }
+  </script>
+</head>
+<body>
+
+  <div class="content">
+    <div class="glass-card">
+      
+      <div class="success-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+
+      <h1>Thank You!</h1>
+      <h2>Your request has been sent successfully.</h2>
+      
+      <p style="color:#ccc;">We will get back to you shortly.</p>
+
+      <button onclick="redirect()" class="submit-btn" style="margin-top: 30px; width: auto; padding-left: 40px; padding-right: 40px;">
+        Go Home Now
+      </button>
+
+      <p class="redirect-text">
+        Redirecting in <span id="timer">5</span> seconds...
+      </p>
+
+    </div>
+  </div>
+
+  <script type='text/javascript' src='//pl27937437.effectivegatecpm.com/da/6a/14/da6a140c7b17ee0c2484ce18fc459493.js'></script>
+
+</body>
+</html>
