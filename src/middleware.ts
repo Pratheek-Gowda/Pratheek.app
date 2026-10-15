@@ -1,44 +1,51 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
-// 1. Public Route Registry (Bypasses Clerk authentication shield)
+// 1. Make root (/), /shop, and Clerk auth pages public
 const isPublicRoute = createRouteMatcher([
-  '/shop(.*)',           // Public access to Pratheek Enterprises shop
-  '/api/chat(.*)',       // Public access for the shop's AI Chatbot API
-  '/sign-in(.*)',        // Clerk Sign-In portal
-  '/sign-up(.*)',        // Clerk Sign-Up portal
-  '/.well-known(.*)'     // Domain & Microsoft identity verification files
+  '/',
+  '/shop(.*)',
+  '/api/chat(.*)',
+  '/sign-in(.*)',
+  '/sign-up(.*)',
+  '/.well-known(.*)'
 ]);
 
-// 2. Edge Middleware with Smart Subpath Routing & Clerk Identity Shield
 export default clerkMiddleware((auth, req) => {
   const { pathname } = req.nextUrl;
+  const referer = req.headers.get('referer') || '';
 
-  // Automatically route https://pratheek.app/shop -> /shop/index.html
-  // Ensuring relative images (d1.png) and links (airtel.html) resolve inside /shop/
-  if (pathname === '/shop' || pathname === '/shop/') {
+  // If Clerk just finished signing in and redirected to '/', send user to '/portal'
+  if (pathname === '/' && (referer.includes('/sign-in') || referer.includes('/sign-up'))) {
+    return NextResponse.redirect(new URL('/portal', req.url));
+  }
+
+  // Route main domain (/) and (/shop) directly to your shop storefront
+  if (pathname === '/' || pathname === '/shop' || pathname === '/shop/') {
     return NextResponse.redirect(new URL('/shop/index.html', req.url));
   }
 
-  // Support clean extensionless sub-routes (e.g., /shop/airtel -> /shop/airtel.html)
+  // Support clean links inside shop (e.g., /shop/airtel -> /shop/airtel.html)
   if (pathname.startsWith('/shop/') && !pathname.includes('.')) {
     return NextResponse.rewrite(new URL(`${pathname}.html`, req.url));
   }
 
-  // Gate 1: Global Identity Shield for protected app & API routes
+  // Protect all non-public routes (including /portal and /api/*) with Clerk
   if (!isPublicRoute(req)) {
     auth().protect();
+  }
+
+  // Serve your existing src/app/page.tsx dashboard on the /portal subpath
+  if (pathname === '/portal' || pathname === '/portal/') {
+    return NextResponse.rewrite(new URL('/', req.url));
   }
 
   return NextResponse.next();
 });
 
-// 3. Edge Matcher Configuration
 export const config = {
   matcher: [
-    // Skip Next.js internals and direct static file requests
     '/((?!_next|[^?]*\\.(?:html|css|js|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
-    // Always execute middleware on API routes
     '/(api|trpc)(.*)',
   ],
 };
