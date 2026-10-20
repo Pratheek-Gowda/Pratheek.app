@@ -1,33 +1,108 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
-<url>
-<loc>https://Pratheek.app/shop/</loc>
-<lastmod>2025-10-26T12:03:04+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://Pratheek.app/shop/airtel</loc>
-<lastmod>2025-10-26T12:03:04+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://Pratheek.app/shop/vodafoneidea</loc>
-<lastmod>2025-10-26T12:03:04+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://Pratheek.app/shop/jio</loc>
-<lastmod>2025-10-26T12:03:04+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://Pratheek.app/shop/about</loc>
-<lastmod>2025-10-26T12:03:04+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://Pratheek.app/shop/contact</loc>
-<lastmod>2025-10-26T12:03:04+00:00</lastmod>
-<priority>0.80</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Storefront & Homepage -->
+  <url>
+    <loc>https://pratheek.app/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Operator Pages -->
+  <url>
+    <loc>https://pratheek.app/shop/airtel</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/vodafoneidea</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/jio</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Informational Guides Hub & Articles -->
+  <url>
+    <loc>https://pratheek.app/shop/guides</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guide-mnp</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guide-5g-settings</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guide-esim-activation</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guide-lost-sim-block</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guide-dnd-activation</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Information & Trust Pages -->
+  <url>
+    <loc>https://pratheek.app/shop/about</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/contact</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Legal & Compliance Pages -->
+  <url>
+    <loc>https://pratheek.app/shop/privacy-policy</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/terms</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/disclaimer</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
 </urlset>
