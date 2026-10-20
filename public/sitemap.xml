@@ -19,60 +19,210 @@
     <loc>https://pratheek.app/shop/airtel</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pratheek.app/shop/vodafoneidea</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pratheek.app/shop/jio</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Informational Guides Hub & Articles -->
+  <!-- Guides Hub & All Articles -->
   <url>
     <loc>https://pratheek.app/shop/guides</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://pratheek.app/shop/guide-mnp</loc>
+    <loc>https://pratheek.app/shop/guides/guide-mnp</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pratheek.app/shop/guide-5g-settings</loc>
+    <loc>https://pratheek.app/shop/guides/guide-5g-settings</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pratheek.app/shop/guide-esim-activation</loc>
+    <loc>https://pratheek.app/shop/guides/guide-esim-activation</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pratheek.app/shop/guide-lost-sim-block</loc>
+    <loc>https://pratheek.app/shop/guides/guide-lost-sim-block</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://pratheek.app/shop/guide-dnd-activation</loc>
+    <loc>https://pratheek.app/shop/guides/guide-dnd-activation</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-aadhaar-mobile-link</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-annual-recharge-benefits</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-apn-settings-internet</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-broadband-installation</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-call-drop-solutions</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-caller-tune-setup</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-claim-5g-unlimited</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-corporate-to-individual</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-data-loan-emergency</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-esim-android-transfer</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-esim-iphone-transfer</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-family-postpaid-plans</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-fancy-vip-numbers</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-international-roaming</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-ott-bundled-plans</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-postpaid-bill-payment</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-prepaid-vs-postpaid</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-puk-code-unlock</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-reactivate-sim</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-sim-swap-fraud</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-sim-validity-extension</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-tafcop-portal</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-track-sim-delivery</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-ussd-codes-list</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pratheek.app/shop/guides/guide-wifi-calling-vowifi</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
-  <!-- Information & Trust Pages -->
+  <!-- Corporate & Trust Pages -->
   <url>
     <loc>https://pratheek.app/shop/about</loc>
     <lastmod>2026-10-20</lastmod>
