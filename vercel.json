@@ -23,7 +23,7 @@
     { "source": "/jio", "destination": "/shop/jio.html" },
     { "source": "/vodafoneidea", "destination": "/shop/vodafoneidea.html" },
     { "source": "/disclaimer", "destination": "/shop/disclaimer.html" },
-    { "source": "/guide-mnp", "destination": "/shop/guide-mnp.html" },
+    { "source": "/guide-mnp", "destination": "/shop/guides/guide-mnp.html" },
     { "source": "/guides", "destination": "/shop/guides.html" },
     { "source": "/privacy", "destination": "/shop/privacy.html" },
     { "source": "/privacy-policy", "destination": "/shop/privacy-policy.html" },

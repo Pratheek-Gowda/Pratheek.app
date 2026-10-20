@@ -4,9 +4,9 @@
 function updateFavicon() {
   const favicon = document.getElementById('favicon');
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    favicon.href = 'airtel.png';
+    favicon.href = '/shop/images/airtel.png';
   } else {
-    favicon.href = 'airtel.png';
+    favicon.href = '/shop/images/airtel.png';
   }
 }
 updateFavicon();
