@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://pratheek.app/shop/guides/guide-sim-swap-fraud" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Preventing SIM Swap Fraud: Protect Your Bank Accounts</title>
+  <meta name="description" content="Learn how cybercriminals use SIM swapping to bypass bank OTPs. Discover the warning signs and protect your mobile number from unauthorized porting.">
+  <link id="favicon" rel="icon" type="image/png" href="../images/p1.png">
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3137365646817161" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    .article-container { max-width: 800px; margin: 0 auto; background: rgba(255, 255, 255, 0.03); padding: 40px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08); }
+    .article-container h1 { color: #fff; font-size: 2.5em; margin-bottom: 20px; }
+    .article-container h2 { color: var(--primary); font-size: 1.8em; margin-top: 30px; margin-bottom: 15px; }
+    .article-container h3 { color: #fff; font-size: 1.4em; margin-top: 25px; margin-bottom: 10px; }
+    .article-container p { color: var(--text-muted); font-size: 1.05em; line-height: 1.8; margin-bottom: 20px; }
+    .article-container ul, .article-container ol { margin-bottom: 20px; padding-left: 20px; }
+    .article-container li { color: var(--text-muted); font-size: 1.05em; line-height: 1.8; margin-bottom: 10px; }
+    .faq-box { background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px; margin-top: 20px; }
+    .alert-box { background: rgba(255, 50, 50, 0.1); border-left: 4px solid #ff3232; padding: 15px; margin-bottom: 20px; color: #fff; }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../airtel.html">Airtel</a></li>
+      <li><a href="../vodafoneidea.html">VI</a></li>
+      <li><a href="../jio.html">Jio</a></li>
+      <li><a href="../guides.html" class="active">Guides</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div class="article-container">
+      <h1>Preventing SIM Swap Fraud: The Ultimate Guide</h1>
+      
+      <p>Your mobile number is the master key to your digital life. It guards your bank accounts, your email, your WhatsApp, and your social media through SMS-based One Time Passwords (OTPs). Cybercriminals know this. Instead of trying to hack into highly secure banking servers, they use a much simpler method: they steal your phone number. This is known as <strong>SIM Swap Fraud</strong> or SIM Hijacking.</p>
+
+      <h2>What is a SIM Swap?</h2>
+      <p>A SIM swap occurs when a fraudster convinces your telecom operator (like Airtel, Jio, or Vi) to transfer your phone number onto a brand-new SIM card that the fraudster holds. They do this by pretending to be you, often using stolen ID proofs (like a leaked Aadhaar card) and filing a fake "Lost SIM" complaint at a telecom store.</p>
+      <p>The moment the telecom operator activates the new SIM for the fraudster, the SIM card inside your actual phone loses signal and goes completely dead. From that point on, every single bank OTP, password reset link, and authentication text goes directly to the fraudster's phone.</p>
+
+      <h2>The Major Warning Signs</h2>
+      <p>A SIM swap attack happens incredibly fast. You must be vigilant for these signs:</p>
+      <ul>
+        <li><strong>Sudden, Unexplained Network Loss:</strong> If you are in a familiar area where you usually get good coverage, and your phone suddenly says "No Service" or "Emergency Calls Only" and restarting doesn't fix it, you might be a victim.</li>
+        <li><strong>A Barrage of Annoying Calls:</strong> Fraudsters will often call your number repeatedly just before they execute the swap. Their goal is to annoy you so much that you turn off your phone or put it on silent, ensuring you don't notice the network loss or the initial warning SMS from your operator.</li>
+        <li><strong>Unexpected SMS Warnings:</strong> If you receive an SMS stating "Your request for a SIM upgrade/replacement has been initiated" and you did not request one, someone is actively attacking your account.</li>
+      </ul>
+
+      <h2>How to Protect Yourself</h2>
+      
+      <h3>1. Never Share the UPC Code</h3>
+      <p>Never reply to SMS messages or callers asking you to forward an 8-digit alphanumeric code. This is the Unique Porting Code (UPC). If a fraudster tricks you into generating and sharing this code, they can instantly port your number to a new operator under their name.</p>
+
+      <h3>2. Switch to App-Based Authenticators</h3>
+      <p>Do not rely solely on SMS for Two-Factor Authentication (2FA). For your email (Gmail), social media (Instagram, Twitter), and crypto wallets, switch your security settings to use an Authenticator App (like Google Authenticator or Authy). These apps generate codes on your physical device and are completely immune to SIM swapping.</p>
+
+      <h3>3. Convert to an eSIM</h3>
+      <p>Physical SIM cards are easier to swap. If you use a modern smartphone (like an iPhone or high-end Android), convert your physical SIM to an eSIM. eSim profiles are locked to your device's hardware. While a fraudster can still try to socially engineer a swap, having an eSIM adds a significant layer of technical difficulty to the attack.</p>
+
+      <div class="alert-box">
+        <strong>What to do if you are attacked:</strong> If your phone loses signal and you suspect a swap, do NOT wait. Use a friend's phone to immediately call your bank's emergency hotline and freeze your accounts. Then, call your telecom operator's customer care (198 or 121) and report the number as hijacked. Finally, file an FIR at your nearest cyber crime police station or the National Cyber Crime Reporting Portal (1930).
+      </div>
+
+      <div class="faq-box">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        
+        <h3>Can telecom operators prevent this?</h3>
+        <p>Yes. The Telecom Regulatory Authority of India (TRAI) has implemented strict rules to curb this. Now, when a SIM is replaced or upgraded, outgoing and incoming SMS services are completely blocked for 24 hours. This gives the actual user a 24-hour window to notice the network loss and report the fraud before the attacker can receive bank OTPs.</p>
+        
+        <h3>How do fraudsters get my Aadhaar details?</h3>
+        <p>Details are often leaked through massive data breaches on poorly secured websites, or when users carelessly leave photocopies of their IDs at hotels, cyber cafes, or unofficial agents.</p>
+      </div>
+
+      <div class="footer" style="margin-top: 50px; text-align: center;">
+        <p class="legal-footer-links">
+          <a href="../privacy-policy.html">Privacy Policy</a> | 
+          <a href="../terms.html">Terms & Conditions</a> | 
+          <a href="../disclaimer.html">Disclaimer</a>
+        </p>
+        <p>&copy; 2026 Pratheek Enterprises. All rights reserved.</p>
+        <div class="disclaimer-note" style="font-size: 12px; color: #666; margin-top: 24px; padding: 12px; border-top: 1px solid #e5e7eb; text-align: center; line-height: 1.5;">
+          <p><strong>Disclaimer:</strong> pratheek.app is managed by Pratheek Enterprises. This guide is for educational purposes. Always rely on official government and banking guidelines for cyber security.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
