@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://pratheek.app/shop/guides/guide-esim-iphone-transfer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Transfer eSIM to a New iPhone (Airtel, Jio, Vi)</title>
+  <meta name="description" content="Bought a new iPhone? Learn how to seamlessly transfer your active eSIM profile from your old iOS device to your new one using Apple's Quick Transfer and SMS methods.">
+  <link id="favicon" rel="icon" type="image/png" href="../images/p.png">
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3137365646817161" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    .article-container { max-width: 800px; margin: 0 auto; background: rgba(255, 255, 255, 0.03); padding: 40px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08); }
+    .article-container h1 { color: #fff; font-size: 2.5em; margin-bottom: 20px; }
+    .article-container h2 { color: var(--primary); font-size: 1.8em; margin-top: 30px; margin-bottom: 15px; }
+    .article-container h3 { color: #fff; font-size: 1.4em; margin-top: 25px; margin-bottom: 10px; }
+    .article-container p { color: var(--text-muted); font-size: 1.05em; line-height: 1.8; margin-bottom: 20px; }
+    .article-container ul, .article-container ol { margin-bottom: 20px; padding-left: 20px; }
+    .article-container li { color: var(--text-muted); font-size: 1.05em; line-height: 1.8; margin-bottom: 10px; }
+    .faq-box { background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px; margin-top: 20px; }
+    .alert-box { background: rgba(240, 159, 51, 0.1); border-left: 4px solid var(--primary); padding: 15px; margin-bottom: 20px; color: #fff; }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../airtel.html">Airtel</a></li>
+      <li><a href="../vodafoneidea.html">VI</a></li>
+      <li><a href="../jio.html">Jio</a></li>
+      <li><a href="../guides.html" class="active">Guides</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div class="article-container">
+      <h1>How to Transfer an eSIM to a New iPhone</h1>
+      
+      <p>Upgrading to a new iPhone is exciting, but since Apple began removing physical SIM trays (especially on US models), dealing with eSIMs has become mandatory for many users. Unlike a physical nano-SIM that you can just pop out with a pin and insert into the new phone, an eSIM is deeply tied to the motherboard's hardware ID (EID). To move your mobile number, you must formally execute a "Transfer" process.</p>
+
+      <p>In India, transferring an eSIM between iOS devices can be done via Apple's native Quick Transfer (supported by Jio and Airtel) or via the traditional SMS authorization method.</p>
+
+      <h2>Method 1: Apple's Native 'Quick Transfer' (iOS 16 and above)</h2>
+      <p>If both your old iPhone and your new iPhone are running iOS 16 or later, you can transfer your eSIM during the initial phone setup process using Bluetooth. Currently, Reliance Jio and Bharti Airtel support this native feature in India.</p>
+      
+      <ol>
+        <li>Place your old iPhone next to your new iPhone. Ensure both have Wi-Fi and Bluetooth turned on.</li>
+        <li>On your new iPhone, go to <strong>Settings > Mobile Service (or Cellular) > Add eSIM</strong>.</li>
+        <li>Select the option <strong>Transfer from Nearby iPhone</strong>.</li>
+        <li>A prompt will appear on your old iPhone asking for permission to transfer the number. Tap "Continue."</li>
+        <li>Your new iPhone will display a 6-digit verification code. Type this code into your old iPhone to authenticate the transfer.</li>
+        <li>The iPhones will communicate with your carrier's servers. Within a few minutes, the signal bars will drop on your old phone and appear on your new iPhone.</li>
+      </ol>
+
+      <div class="alert-box">
+        <strong>TRAI 24-Hour SMS Block:</strong> Regardless of which method you use, the Telecom Regulatory Authority of India mandates a strict 24-hour block on all incoming and outgoing SMS text messages for security purposes. You will be able to make voice calls immediately, but you cannot receive bank OTPs for 24 hours.
+      </div>
+
+      <h2>Method 2: The SMS Authorization Method (For Vi or if Quick Transfer Fails)</h2>
+      <p>If you are moving from an Android to an iPhone, or if Apple's native transfer fails (which happens occasionally due to server timeouts), you must use the standard operator SMS method.</p>
+
+      <h3>Step A: Get the EID of your New iPhone</h3>
+      <p>Go to your <strong>new</strong> iPhone's Settings > General > About. Scroll down to find the 32-digit <strong>EID number</strong> and the 15-digit <strong>IMEI number</strong>. Keep these handy.</p>
+
+      <h3>Step B: Send the Request from your Old Phone</h3>
+      <p>From your <strong>old</strong> phone (which still has the active eSIM signal), send a specific SMS based on your operator:</p>
+      
+      <ul>
+        <li><strong>For Airtel:</strong> SMS <code>eSIM [Registered Email ID]</code> to <strong>121</strong>. Follow the confirmation steps. You will receive a QR code on your email. Scan it on your new iPhone.</li>
+        <li><strong>For Jio:</strong> SMS <code>GETESIM [32 Digit EID] [15 Digit IMEI]</code> to <strong>199</strong>. You will receive a 19-digit virtual SIM number. Follow it up with SMS <code>SIMCHG [19 Digit Virtual SIM Number]</code> to 199. After 2 hours, you will get an activation prompt in your new iPhone's settings.</li>
+        <li><strong>For Vi:</strong> SMS <code>eSIM [Registered Email ID]</code> to <strong>199</strong>. Confirm the request. Vi will email you a QR code. Go to your new iPhone > Settings > Mobile Service > Add eSIM > Use QR Code, and scan it.</li>
+      </ul>
+
+      <div class="faq-box">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        
+        <h3>Should I delete the eSIM from my old iPhone first?</h3>
+        <p><strong>Absolutely NOT.</strong> Never delete the eSIM profile from your old phone until the new phone is fully active and showing network bars. If you delete it beforehand, you will lose network access to send the authorization SMS, and you will be forced to visit a physical store to retrieve your number.</p>
+        
+        <h3>Does transferring an eSIM delete my iMessage history?</h3>
+        <p>No. iMessage history is tied to your Apple ID iCloud backup, not your carrier SIM. Once your new eSIM activates, iMessage will automatically re-verify the number in the background.</p>
+      </div>
+
+      <div class="footer" style="margin-top: 50px; text-align: center;">
+        <p class="legal-footer-links">
+          <a href="../privacy-policy.html">Privacy Policy</a> | 
+          <a href="../terms.html">Terms & Conditions</a> | 
+          <a href="../disclaimer.html">Disclaimer</a>
+        </p>
+        <p>&copy; 2026 Pratheek Enterprises. All rights reserved.</p>
+        <div class="disclaimer-note" style="font-size: 12px; color: #666; margin-top: 24px; padding: 12px; border-top: 1px solid #e5e7eb; text-align: center; line-height: 1.5;">
+          <p><strong>Disclaimer:</strong> pratheek.app is managed by Pratheek Enterprises. Apple, iOS, and iPhone are registered trademarks of Apple Inc. Telecom transfer processes are subject to change by operators.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
