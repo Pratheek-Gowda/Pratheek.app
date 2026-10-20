@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://pratheek.app/shop/guides/guide-esim-android-transfer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Transfer eSIM between Android Phones (Samsung, Pixel, Moto)</title>
+  <meta name="description" content="Switching Android phones? Learn the correct SMS procedures and QR code methods to transfer your active eSIM profile from one Android device to another in India.">
+  <link id="favicon" rel="icon" type="image/png" href="../images/p.png">
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3137365646817161" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    .article-container { max-width: 800px; margin: 0 auto; background: rgba(255, 255, 255, 0.03); padding: 40px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08); }
+    .article-container h1 { color: #fff; font-size: 2.5em; margin-bottom: 20px; }
+    .article-container h2 { color: var(--primary); font-size: 1.8em; margin-top: 30px; margin-bottom: 15px; }
+    .article-container h3 { color: #fff; font-size: 1.4em; margin-top: 25px; margin-bottom: 10px; }
+    .article-container p { color: var(--text-muted); font-size: 1.05em; line-height: 1.8; margin-bottom: 20px; }
+    .article-container ul, .article-container ol { margin-bottom: 20px; padding-left: 20px; }
+    .article-container li { color: var(--text-muted); font-size: 1.05em; line-height: 1.8; margin-bottom: 10px; }
+    .faq-box { background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px; margin-top: 20px; }
+    .alert-box { background: rgba(255, 50, 50, 0.1); border-left: 4px solid #ff3232; padding: 15px; margin-bottom: 20px; color: #fff; }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../airtel.html">Airtel</a></li>
+      <li><a href="../vodafoneidea.html">VI</a></li>
+      <li><a href="../jio.html">Jio</a></li>
+      <li><a href="../guides.html" class="active">Guides</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div class="article-container">
+      <h1>How to Transfer an eSIM Between Android Phones</h1>
+      
+      <p>As flagship Android devices like the Samsung Galaxy S-series, Google Pixel, and high-end Motorola edge phones move towards eSIM adoption, users are discovering a new challenge: transferring their number. You cannot physically pull an eSIM out of a broken phone and place it in a new one. Because an eSIM profile is securely tied to the hardware of your specific device, moving it requires authorizing a new profile download.</p>
+
+      <p>While Google is currently rolling out a native "eSIM Transfer Tool" in Android 14, support among Indian telecom operators remains patchy. For a guaranteed, fail-proof transfer, you must rely on the operator's official SMS and QR code process.</p>
+
+      <div class="alert-box">
+        <strong>Important Rule:</strong> Do NOT delete or "Erase" the eSIM from your old Android phone until the new phone has successfully connected to the network and shows signal bars. If you delete it early, you will be stranded without network access to authorize the transfer!
+      </div>
+
+      <h2>Preparation: Get Your New Phone's EID</h2>
+      <p>The EID (Embedded Identity Document) is a 32-digit serial number unique to your new phone's eSIM chip. To find it:</p>
+      <ul>
+        <li>Turn on your <strong>new</strong> Android phone.</li>
+        <li>Go to <strong>Settings > About Phone > Status information</strong> (or similar, depending on the manufacturer).</li>
+        <li>Look for the 32-digit <strong>EID</strong> and write it down or keep the screen awake.</li>
+        <li>You will also need the 15-digit <strong>IMEI</strong> (specifically IMEI 1 or the eSIM IMEI) of the new phone.</li>
+      </ul>
+
+      <h2>The Transfer Process by Operator</h2>
+      
+      <h3>1. Transferring an Airtel eSIM</h3>
+      <p>Airtel relies heavily on email QR codes for their transfers.</p>
+      <ol>
+        <li>From your <strong>old</strong> phone, send an SMS: <code>eSIM [Your Registered Email ID]</code> to <strong>121</strong>.</li>
+        <li>Airtel will reply asking for confirmation. Reply with <code>1</code>.</li>
+        <li>Airtel will call you for voice consent. Press <code>1</code> on the call.</li>
+        <li>Check your email inbox on another device (like a laptop). You will receive an email from Airtel containing a QR code.</li>
+        <li>On your <strong>new</strong> Android phone, go to Settings > Network & Internet > SIMs > Add SIM > Download an eSIM instead.</li>
+        <li>Scan the QR code from the email using the new phone's camera. The profile will download and activate within 2 hours.</li>
+      </ol>
+
+      <h3>2. Transferring a Reliance Jio eSIM</h3>
+      <p>Jio uses a highly secure, purely SMS-based automated system.</p>
+      <ol>
+        <li>From your <strong>old</strong> phone, SMS: <code>GETESIM [New Phone's 32-digit EID] [New Phone's 15-digit IMEI]</code> to <strong>199</strong>.</li>
+        <li>Jio will reply with a 19-digit Virtual SIM Number.</li>
+        <li>Send another SMS from the old phone: <code>SIMCHG [The 19-digit Virtual SIM Number]</code> to 199.</li>
+        <li>After 2 hours, Jio will send an SMS stating processing is complete.</li>
+        <li>On your <strong>new</strong> phone, connect to Wi-Fi. You should receive a push notification in Settings asking you to "Set up your Jio plan." Tap it to download the profile.</li>
+      </ol>
+
+      <h3>3. Transferring a Vodafone Idea (Vi) eSIM</h3>
+      <p>Vi follows a similar email-based QR process to Airtel.</p>
+      <ol>
+        <li>From your <strong>old</strong> phone, send an SMS: <code>eSIM [Registered Email ID]</code> to <strong>199</strong>.</li>
+        <li>If your email is valid, Vi will send a confirmation SMS. Reply with <code>ESIMY</code>.</li>
+        <li>You will receive a confirmation call from Vi. Provide your consent.</li>
+        <li>Open the email sent by Vi containing the QR code.</li>
+        <li>On your <strong>new</strong> phone, go to SIM settings, choose "Add eSIM," and scan the QR code. The activation will complete shortly.</li>
+      </ol>
+
+      <div class="faq-box">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        
+        <h3>My old Android phone screen is broken and touch doesn't work. How do I transfer?</h3>
+        <p>If you cannot use your old phone to send the required authorization SMS, the digital transfer process is impossible. You must take your physical Aadhaar card and visit an official company-owned gallery (Airtel Store, Jio Center) to have a physical replacement SIM issued, which you can then convert back to an eSIM on the new device.</p>
+        
+        <h3>Why are my incoming and outgoing SMS blocked on the new phone?</h3>
+        <p>This is a mandatory security directive by the Department of Telecommunications (DoT). To prevent banking fraud via SIM swapping, all SMS services (including OTPs) are blocked for exactly 24 hours after an eSIM transfer or physical SIM replacement.</p>
+      </div>
+
+      <div class="footer" style="margin-top: 50px; text-align: center;">
+        <p class="legal-footer-links">
+          <a href="../privacy-policy.html">Privacy Policy</a> | 
+          <a href="../terms.html">Terms & Conditions</a> | 
+          <a href="../disclaimer.html">Disclaimer</a>
+        </p>
+        <p>&copy; 2026 Pratheek Enterprises. All rights reserved.</p>
+        <div class="disclaimer-note" style="font-size: 12px; color: #666; margin-top: 24px; padding: 12px; border-top: 1px solid #e5e7eb; text-align: center; line-height: 1.5;">
+          <p><strong>Disclaimer:</strong> pratheek.app is managed by Pratheek Enterprises. Android is a trademark of Google LLC. Telecom transfer processes are subject to change; always verify with your respective operator.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
