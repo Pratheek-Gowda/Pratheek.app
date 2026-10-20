@@ -36,17 +36,23 @@ export default clerkMiddleware((auth, req) => {
     return NextResponse.redirect(new URL('/shop/index.html', req.url));
   }
 
-  // 5. Clean URLs: allow visiting /shop/guide-mnp without typing .html
+  // 5. Clean URLs for moved guide pages
+  if (pathname.startsWith('/shop/guide-') && !pathname.includes('.')) {
+    const guideSlug = pathname.split('/').pop();
+    return NextResponse.rewrite(new URL(`/shop/guides/${guideSlug}.html`, req.url));
+  }
+
+  // 6. Generic clean URLs: allow visiting /shop/<page> without typing .html
   if (pathname.startsWith('/shop/') && !pathname.includes('.')) {
     return NextResponse.rewrite(new URL(`${pathname}.html`, req.url));
   }
 
-  // 6. Protect private portal routes only
+  // 7. Protect private portal routes only
   if (isProtectedRoute(req)) {
     auth().protect();
   }
 
-  // 7. Serve portal dashboard on /portal
+  // 8. Serve portal dashboard on /portal
   if (pathname === '/portal' || pathname === '/portal/') {
     return NextResponse.rewrite(new URL('/', req.url));
   }
