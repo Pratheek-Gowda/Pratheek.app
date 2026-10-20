@@ -1,72 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3137365646817161"
-     crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Telecom Guides & Blog | Pratheek's Gesture</title>
+  <title>Telecom Guides & Support | Pratheek's Gesture</title>
+  <meta name="description" content="Explore our library of step-by-step guides for Airtel, Jio, and Vi. Learn about MNP, eSIM activation, 5G settings, DND registration, and more.">
   <link id="favicon" rel="icon" type="image/png" href="p1.png">
   <link rel="stylesheet" href="style.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1128779923094430" crossorigin="anonymous"></script>
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3137365646817161" crossorigin="anonymous"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <style>
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
-    .blog-card {
-      background: var(--glass-bg);
-      border: 1px solid var(--glass-border);
-      backdrop-filter: blur(16px);
-      border-radius: 20px;
-      padding: 25px;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .blog-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--primary);
-      box-shadow: 0 10px 30px rgba(240, 159, 51, 0.2);
-    }
-    .blog-date {
-      color: var(--primary);
-      font-size: 0.8em;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-    .blog-title {
-      font-size: 1.3em;
-      color: #fff;
-      margin-bottom: 15px;
-      line-height: 1.4;
-    }
-    .blog-excerpt {
-      color: var(--text-muted);
-      font-size: 0.9em;
-      margin-bottom: 20px;
-      flex-grow: 1;
-    }
-    .read-more {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9em;
-      display: inline-flex;
-      align-items: center;
-      transition: gap 0.3s;
-      gap: 5px;
-    }
-    .read-more:hover {
-      gap: 10px;
-      color: #fff;
-    }
+    .guides-header { text-align: center; margin-bottom: 40px; }
+    .guides-header h1 { color: #fff; font-size: 2.5em; margin-bottom: 10px; }
+    .guides-header p { color: var(--text-muted); font-size: 1.1em; }
+    
+    .guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 40px; }
+    
+    .guide-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 25px; transition: all 0.3s ease; display: flex; flex-direction: column; }
+    .guide-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.06); border-color: rgba(240, 159, 51, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+    
+    .guide-icon { font-size: 2em; color: var(--primary); margin-bottom: 20px; }
+    .guide-title { color: #fff; font-size: 1.3em; margin-bottom: 10px; line-height: 1.4; }
+    .guide-excerpt { color: var(--text-muted); font-size: 0.95em; line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
+    
+    .read-more { color: var(--primary); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95em; transition: gap 0.3s; }
+    .guide-card:hover .read-more { gap: 12px; }
+    
     .legal-footer-links a { color: var(--primary); text-decoration: none; margin: 0 10px; font-size: 0.9em; }
     .legal-footer-links a:hover { color: #fff; text-decoration: underline; }
   </style>
@@ -86,33 +51,53 @@
 
   <div class="content">
     <div class="glass-card">
-      <h1>Telecom Guides</h1>
-      <p class="subtitle">Latest tips, tricks, and network news for Karnataka users.</p>
+      <div class="guides-header">
+        <h1>Telecom Help & Guides</h1>
+        <p>Expert tutorials and step-by-step instructions for managing your mobile connection.</p>
+      </div>
 
-      <div class="blog-grid">
-        <!-- Featured Real Post -->
-        <div class="blog-card">
-          <div class="blog-date">June 20, 2026</div>
-          <h2 class="blog-title">The Ultimate Guide to MNP: How to Port Your Number Easily</h2>
-          <p class="blog-excerpt">Tired of poor network coverage? Learn the exact step-by-step process to port your existing mobile number to Airtel, Jio, or VI without losing your contacts.</p>
-          <a href="guide-mnp.html" class="read-more">Read Full Guide <i class="fas fa-arrow-right"></i></a>
+      <div class="guides-grid">
+        
+        <!-- Guide 1: MNP -->
+        <div class="guide-card">
+          <div class="guide-icon"><i class="fas fa-exchange-alt"></i></div>
+          <h2 class="guide-title">The Complete Guide to MNP</h2>
+          <p class="guide-excerpt">Step-by-step walkthrough to port your SIM card to Airtel, Jio, or Vi without changing your mobile number. Learn MNP rules and UPC generation.</p>
+          <a href="guide-mnp.html" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <!-- Placeholder Post 1 -->
-        <div class="blog-card">
-          <div class="blog-date">June 15, 2026</div>
-          <h2 class="blog-title">Comparing 5G Speeds: Jio vs. Airtel in Karnataka</h2>
-          <p class="blog-excerpt">5G is fully rolled out across major cities. We break down the real-world download speeds and latency between the top two providers in the state.</p>
-          <a href="#" class="read-more">Coming Soon <i class="fas fa-clock"></i></a>
+        <!-- Guide 2: eSIM -->
+        <div class="guide-card">
+          <div class="guide-icon"><i class="fas fa-sim-card"></i></div>
+          <h2 class="guide-title">How to Convert to eSIM</h2>
+          <p class="guide-excerpt">Upgrade to a digital SIM. Learn the exact SMS formats and procedures to migrate from a physical nano-SIM to an eSIM for Airtel, Jio, and Vi.</p>
+          <a href="guide-esim-activation.html" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <!-- Placeholder Post 2 -->
-        <div class="blog-card">
-          <div class="blog-date">June 10, 2026</div>
-          <h2 class="blog-title">Best Value Prepaid Plans for College Students in 2026</h2>
-          <p class="blog-excerpt">Looking for maximum data on a budget? Check out our curated list of the most cost-effective prepaid recharges tailored for student needs.</p>
-          <a href="#" class="read-more">Coming Soon <i class="fas fa-clock"></i></a>
+        <!-- Guide 3: Lost SIM -->
+        <div class="guide-card">
+          <div class="guide-icon"><i class="fas fa-ban"></i></div>
+          <h2 class="guide-title">Block a Lost or Stolen SIM</h2>
+          <p class="guide-excerpt">Immediate steps to secure your banking OTPs and digital identity if you lose your phone. Find customer care numbers and SIM replacement steps.</p>
+          <a href="guide-lost-sim-block.html" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
         </div>
+
+        <!-- Guide 4: 5G Settings -->
+        <div class="guide-card">
+          <div class="guide-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <h2 class="guide-title">Enable 5G on iOS & Android</h2>
+          <p class="guide-excerpt">Maximize your mobile data speeds. Understand the difference between 5G SA/NSA and learn how to correctly configure network settings on your smartphone.</p>
+          <a href="guide-5g-settings.html" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Guide 5: DND Activation -->
+        <div class="guide-card">
+          <div class="guide-icon"><i class="fas fa-phone-slash"></i></div>
+          <h2 class="guide-title">Activate TRAI DND (1909)</h2>
+          <p class="guide-excerpt">Stop annoying spam calls and telemarketing texts. Follow this guide to register your number on the National Customer Preference Register.</p>
+          <a href="guide-dnd-activation.html" class="read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+        </div>
+
       </div>
 
       <div class="footer" style="margin-top: 50px; text-align: center;">
@@ -121,11 +106,11 @@
           <a href="terms.html">Terms & Conditions</a> | 
           <a href="disclaimer.html">Disclaimer</a>
         </p>
-        <p>&copy; 2026 Pratheek Designs. All rights reserved.</p>
-       <div class="disclaimer-note" style="font-size: 12px; color: #666; margin-top: 24px; padding: 12px; border-top: 1px solid #e5e7eb; text-align: center; line-height: 1.5;">
-    <p><strong>Disclaimer:</strong> pratheek.app is managed by Pratheek Enterprises, an authorized multi-brand retail partner for Airtel, Reliance Jio, and Vodafone Idea (Vi). While we provide official retailer and customer assistance services, this website is an independently operated portal and is not the official corporate website of Bharti Airtel, Reliance Jio Infocomm, or Vodafone Idea Limited. All operator brand names, logos, and registered trademarks belong to their respective corporate owners.</p>
-  </div>
-</div>
+        <p>&copy; 2026 Pratheek Enterprises. All rights reserved.</p>
+        
+        <div class="disclaimer-note" style="font-size: 12px; color: #666; margin-top: 24px; padding: 12px; border-top: 1px solid #e5e7eb; text-align: center; line-height: 1.5;">
+          <p><strong>Disclaimer:</strong> pratheek.app is managed by Pratheek Enterprises, an authorized multi-brand retail partner for Airtel, Reliance Jio, and Vodafone Idea (Vi). While we provide official retailer and customer assistance services, this website is an independently operated portal and is not the official corporate website of Bharti Airtel, Reliance Jio Infocomm, or Vodafone Idea Limited. All operator brand names, logos, and registered trademarks belong to their respective corporate owners.</p>
+        </div>
       </div>
     </div>
   </div>
