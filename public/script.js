@@ -24,7 +24,8 @@ const FRC_PLANS = [
 
 // Helper to show loading state
 function setLoading(isLoading) {
-    document.getElementById('loading-overlay').style.display = isLoading ? 'flex' : 'none';
+    const overlay = document.getElementById('loading-overlay');
+    if(overlay) overlay.style.display = isLoading ? 'flex' : 'none';
 }
 
 // Helper to format currency properly with 2 decimals (paise)
@@ -34,16 +35,22 @@ function formatCurrency(amount) {
 
 // Custom Premium Toast Notification
 function showToast(message, type = 'info') {
-    const container = document.getElementById('toast-container');
+    let container = document.getElementById('toast-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'toast-container';
+        container.className = 'fixed top-4 right-4 z-[9999] flex flex-col gap-2 pointer-events-none';
+        document.body.appendChild(container);
+    }
+
     const toast = document.createElement('div');
-    
     const bg = type === 'error' ? 'bg-red-600/90' : type === 'success' ? 'bg-green-600/90' : 'bg-blue-600/90';
     
-    toast.className = `toast ${bg} text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 font-semibold transform translate-x-full opacity-0`;
+    toast.className = `toast ${bg} text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 font-semibold transform translate-x-full opacity-0 transition-all duration-300`;
     toast.innerHTML = `<i data-lucide="${type === 'error' ? 'alert-circle' : 'check-circle'}" class="w-5 h-5"></i> <span>${message}</span>`;
     
     container.appendChild(toast);
-    lucide.createIcons();
+    if(typeof lucide !== 'undefined') lucide.createIcons();
 
     setTimeout(() => {
         toast.classList.remove('translate-x-full', 'opacity-0');
@@ -55,6 +62,60 @@ function showToast(message, type = 'info') {
         toast.classList.add('translate-x-full', 'opacity-0');
         setTimeout(() => toast.remove(), 400);
     }, 4000);
+}
+
+// Custom Prompt Modal (Replacing native prompt)
+function showCustomPrompt(message, callback) {
+    const overlay = document.createElement('div');
+    overlay.className = 'fixed inset-0 bg-black/50 z-[100] flex items-center justify-center p-4 backdrop-blur-sm animate-fade-in';
+    overlay.innerHTML = `
+        <div class="bg-white rounded-2xl p-6 w-full max-w-sm shadow-2xl transform transition-all">
+            <h3 class="text-lg font-bold text-gray-900 mb-4">${message}</h3>
+            <input type="number" step="0.01" id="custom-prompt-input" class="w-full border border-gray-300 p-3 rounded-xl mb-4 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 font-bold" placeholder="0.00">
+            <div class="flex justify-end gap-3">
+                <button id="custom-prompt-cancel" class="px-4 py-2 text-gray-600 font-bold hover:bg-gray-100 rounded-lg transition-colors">Cancel</button>
+                <button id="custom-prompt-ok" class="px-4 py-2 bg-blue-600 text-white font-bold hover:bg-blue-700 rounded-lg shadow-md transition-colors">Confirm</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+    
+    document.getElementById('custom-prompt-input').focus();
+
+    document.getElementById('custom-prompt-cancel').onclick = () => {
+        overlay.remove();
+        callback(null);
+    };
+    document.getElementById('custom-prompt-ok').onclick = () => {
+        const val = document.getElementById('custom-prompt-input').value;
+        overlay.remove();
+        callback(val);
+    };
+}
+
+// Custom Confirm Modal (Replacing native confirm)
+function showCustomConfirm(message, callback) {
+    const overlay = document.createElement('div');
+    overlay.className = 'fixed inset-0 bg-black/50 z-[100] flex items-center justify-center p-4 backdrop-blur-sm animate-fade-in';
+    overlay.innerHTML = `
+        <div class="bg-white rounded-2xl p-6 w-full max-w-sm shadow-2xl transform transition-all">
+            <h3 class="text-lg font-bold text-gray-900 mb-6">${message}</h3>
+            <div class="flex justify-end gap-3">
+                <button id="custom-confirm-cancel" class="px-4 py-2 text-gray-600 font-bold hover:bg-gray-100 rounded-lg transition-colors">Cancel</button>
+                <button id="custom-confirm-ok" class="px-4 py-2 bg-red-600 text-white font-bold hover:bg-red-700 rounded-lg shadow-md transition-colors">Revoke Access</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+    
+    document.getElementById('custom-confirm-cancel').onclick = () => {
+        overlay.remove();
+        callback(false);
+    };
+    document.getElementById('custom-confirm-ok').onclick = () => {
+        overlay.remove();
+        callback(true);
+    };
 }
 
 // Generic API Fetcher
@@ -123,6 +184,7 @@ async function loadData() {
 const app = document.getElementById('app');
 
 function render() {
+    if(!app) return;
     if (!currentUser) {
         renderLogin();
     } else if (currentUser.role === 'admin') {
@@ -130,7 +192,7 @@ function render() {
     } else {
         renderUserDashboard();
     }
-    lucide.createIcons();
+    if(typeof lucide !== 'undefined') lucide.createIcons();
 }
 
 /* --- LOGIN VIEW --- */
@@ -148,11 +210,11 @@ function renderLogin() {
                 <form id="login-form" class="space-y-5">
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-1">Username</label>
-                        <input type="text" id="username" class="block w-full bg-white/90 px-4 py-3 border border-gray-200 rounded-xl focus:outline-none" required placeholder="Enter your username">
+                        <input type="text" id="username" class="block w-full bg-white/90 px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500" required placeholder="Enter your username">
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-1">Password</label>
-                        <input type="password" id="password" class="block w-full bg-white/90 px-4 py-3 border border-gray-200 rounded-xl focus:outline-none" required placeholder="••••••••">
+                        <input type="password" id="password" class="block w-full bg-white/90 px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500" required placeholder="••••••••">
                     </div>
                     <button type="submit" class="w-full py-3 px-4 rounded-xl text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/30 transition-all mt-4">
                         Secure Login
@@ -303,8 +365,8 @@ function renderAdminDashboard() {
                     <h2 class="text-xl font-bold mb-6 flex items-center gap-2 text-gray-800"><i data-lucide="users" class="text-blue-500"></i> Manage Subagents</h2>
                     
                     <form id="add-user-form" class="flex flex-col md:flex-row gap-3 mb-6 bg-black/5 p-2 rounded-2xl border border-white/50">
-                        <input type="text" id="new-username" placeholder="Subagent Username" class="border-none bg-white p-3 rounded-xl flex-1 outline-none font-medium" required>
-                        <input type="text" id="new-password" placeholder="Secure Password" class="border-none bg-white p-3 rounded-xl flex-1 outline-none font-medium" required>
+                        <input type="text" id="new-username" placeholder="Subagent Username" class="border-none bg-white p-3 rounded-xl flex-1 outline-none font-medium focus:ring-2 focus:ring-blue-500" required>
+                        <input type="text" id="new-password" placeholder="Secure Password" class="border-none bg-white p-3 rounded-xl flex-1 outline-none font-medium focus:ring-2 focus:ring-blue-500" required>
                         <button type="submit" class="bg-gray-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-black shadow-md transition-all w-full md:w-auto">Create</button>
                     </form>
 
@@ -594,25 +656,28 @@ window.updateAdminWallet = async function(action) {
     } catch (err) {}
 }
 
-window.handleCreditDebit = async function(userId, username, type) {
-    const rawAmt = prompt(`Enter amount to ${type} for ${username} (e.g. 100.50):`);
-    if (rawAmt === null) return; 
-    const amt = parseFloat(rawAmt);
-    if (isNaN(amt) || amt <= 0) return showToast('Invalid amount', 'error');
-    try { 
-        await apiCall('/api/wallet', 'POST', { userId, amount: amt, action: type, description: `Manual ${type.toLowerCase()} by Admin` }); 
-        showToast(`Success`, 'success'); 
-        await loadData(); 
-    } catch(err) {}
+window.handleCreditDebit = function(userId, username, type) {
+    showCustomPrompt(`Enter amount to ${type} for ${username} (e.g. 100.50):`, async (rawAmt) => {
+        if (rawAmt === null) return; 
+        const amt = parseFloat(rawAmt);
+        if (isNaN(amt) || amt <= 0) return showToast('Invalid amount', 'error');
+        try { 
+            await apiCall('/api/wallet', 'POST', { userId, amount: amt, action: type, description: `Manual ${type.toLowerCase()} by Admin` }); 
+            showToast(`Success`, 'success'); 
+            await loadData(); 
+        } catch(err) {}
+    });
 }
 
-window.handleDeleteUser = async function(userId, username) {
-    if (!confirm(`Revoke access for ${username}? Remaining balance will route to Treasury.`)) return;
-    try { 
-        const res = await apiCall(`/api/users?id=${userId}`, 'DELETE'); 
-        showToast(`Access revoked.`, 'info'); 
-        await loadData(); 
-    } catch (err) {}
+window.handleDeleteUser = function(userId, username) {
+    showCustomConfirm(`Revoke access for ${username}? Remaining balance will route to Treasury.`, async (confirmed) => {
+        if (!confirmed) return;
+        try { 
+            const res = await apiCall(`/api/users?id=${userId}`, 'DELETE'); 
+            showToast(`Access revoked.`, 'info'); 
+            await loadData(); 
+        } catch (err) {}
+    });
 }
 
 window.updateMarquee = async function() {
@@ -767,3 +832,18 @@ setInterval(() => {
 }, 10000);
 
 init();
+
+/* ==========================================
+   PWA SERVICE WORKER REGISTRATION
+   ========================================== */
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(error => {
+                console.log('ServiceWorker registration failed: ', error);
+            });
+    });
+}
