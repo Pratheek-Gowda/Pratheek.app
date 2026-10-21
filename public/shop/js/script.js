@@ -1,7 +1,7 @@
 /* script.js - Pratheek's Gesture Logic */
 
 // 1. Dynamic Favicon
-function updateFavicon() {
+function updateFavicon() { 
   const favicon = document.getElementById('favicon');
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     favicon.href = '/shop/images/airtel.png';
